@@ -1,5 +1,3 @@
-// lib/screens/ideal_weight_screen.dart
-
 import 'package:flutter/material.dart';
 import '../widgets/bottom_navbar.dart';
 
@@ -22,14 +20,11 @@ class IdealWeightScreen extends StatelessWidget {
     );
   }
 
-  // Widget untuk merepresentasikan tombol kecil di bawah
   Widget _buildSmallButton(BuildContext context, String text) {
     return Expanded(
       child: GestureDetector(
         onTap: () {
-          // Navigasi ke halaman hasil Ideal Weight
           if (text == 'Calculate') {
-            // Navigator.pushNamed sekarang memiliki akses context yang benar
             Navigator.pushNamed(context, '/ideal_weight_result');
           }
         },
@@ -58,35 +53,29 @@ class IdealWeightScreen extends StatelessWidget {
             // Header
             Container(
               margin: const EdgeInsets.all(16.0),
-              // Padding sedikit lebih besar agar lingkaran tidak terlalu mepet border
+
               padding: const EdgeInsets.all(24.0),
               decoration: BoxDecoration(
                 border: Border.all(color: Colors.black),
-                // Membuat bentuk lingkaran
+
                 shape: BoxShape.circle,
-                // Atau bisa juga menggunakan: borderRadius: BorderRadius.circular(50.0),
               ),
               child: const SizedBox(
                 width: 60,
                 height: 60,
-                child: Placeholder(
-                  color: Colors.black,
-                ), // Ikon placeholder di tengah lingkaran
+                child: Placeholder(color: Colors.black),
               ),
             ),
 
-            // Input Fields (4 kotak)
             _buildInputField(),
             _buildInputField(),
             _buildInputField(),
             _buildInputField(),
 
-            // Tombol Kecil di Bawah
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(
                 children: <Widget>[
-                  // 🔥 PERBAIKAN: Memanggil dengan context sebagai argumen pertama
                   _buildSmallButton(context, 'Calculate'),
                   _buildSmallButton(context, 'Reset'),
                 ],

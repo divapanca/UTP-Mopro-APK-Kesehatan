@@ -11,44 +11,36 @@ class IdealWeightResultScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            // Header (Placeholder kecil)
             Container(
               margin: const EdgeInsets.all(16.0),
-              // Padding sedikit lebih besar agar lingkaran tidak terlalu mepet border
+
               padding: const EdgeInsets.all(24.0),
               decoration: BoxDecoration(
                 border: Border.all(color: Colors.black),
-                // Membuat bentuk lingkaran
+
                 shape: BoxShape.circle,
-                // Atau bisa juga menggunakan: borderRadius: BorderRadius.circular(50.0),
               ),
               child: const SizedBox(
                 width: 60,
                 height: 60,
-                child: Placeholder(
-                  color: Colors.black,
-                ), // Ikon placeholder di tengah lingkaran
-              ),
-            ),
-
-            // Bagian Hasil Utama (Placeholder besar)
-            Container(
-              margin: const EdgeInsets.all(14.0),
-              padding: const EdgeInsets.all(
-                30.0,
-              ), // Sesuaikan padding sesuai kebutuhan
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.black),
-                shape: BoxShape.circle, // Membuat bentuk lingkaran
-              ),
-              child: const SizedBox(
-                width: 100, // Sesuaikan ukuran lebar sesuai kebutuhan Anda
-                height: 100, // Sesuaikan ukuran tinggi sesuai kebutuhan Anda
                 child: Placeholder(color: Colors.black),
               ),
             ),
 
-            // Garis Teks Tambahan di Bawah
+            Container(
+              margin: const EdgeInsets.all(14.0),
+              padding: const EdgeInsets.all(30.0),
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.black),
+                shape: BoxShape.circle,
+              ),
+              child: const SizedBox(
+                width: 100,
+                height: 100,
+                child: Placeholder(color: Colors.black),
+              ),
+            ),
+
             Container(
               margin: const EdgeInsets.symmetric(
                 horizontal: 16.0,
