@@ -7,7 +7,7 @@ import 'screens/calories_result_screen.dart';
 import 'screens/blood_volume_screen.dart';
 import 'screens/blood_volume_result_screen.dart';
 import 'screens/ideal_weight_screen.dart';
-import 'screens/ideal_weight_result_screen.dart';
+import 'screens/ideal_weight_result_screen.dart'; 
 
 void main() {
   runApp(const MyApp());
@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(primarySwatch: Colors.blue),
       initialRoute: '/',
       routes: {
+        
         '/': (context) => const HomeScreen(),
         '/bmi': (context) => const BMIScreen(),
         '/bmi_result': (context) => const BMIResultScreen(),
