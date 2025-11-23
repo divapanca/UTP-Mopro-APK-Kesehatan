@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../widgets/bottom_navbar.dart';
+import '../widgets/bottom_navbar.dart'; 
 
 class BMIScreen extends StatelessWidget {
   const BMIScreen({super.key});
@@ -36,10 +36,6 @@ class BMIScreen extends StatelessWidget {
             borderRadius: BorderRadius.circular(5.0),
           ),
           child: Center(
-            child: Text(
-              text,
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            ),
           ),
         ),
       ),
